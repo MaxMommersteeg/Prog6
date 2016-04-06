@@ -1,0 +1,53 @@
+﻿@model Tamagotchi.Web.Models.User
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<div class="row">
+    <div class="col-md-4">
+        @if (!String.IsNullOrEmpty((String)TempData["UserFeedback"])) {
+            <div class="alert alert-info alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                @TempData["UserFeedback"]
+            </div>
+        }
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        @if (TempData["logout"] != null) {
+            if ((bool)TempData["logout"]) {
+                <br />
+                <div class="alert alert-info alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    U bent nu <strong>uitgelogd</strong>.
+                </div>
+            }
+        }
+    </div>
+</div>
+
+<h2>Login</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+            <div class="form-horizontal">
+                <hr />
+                <div class="form-group">
+                    @Html.TextBoxFor(model => model.Username, new { @class = "form-control width-100", @placeholder = "Gebruikersnaam", required = "required" })
+                    <br/>
+                    <p class="pull-right">
+                        <input type="submit" value="Login" class="btn btn-primary" />
+                    </p>
+                </div>
+                
+            </div>
+        }
+    </div>
+</div>
+
+

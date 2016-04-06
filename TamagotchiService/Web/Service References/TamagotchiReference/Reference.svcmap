@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c1853de0-6ffc-47d4-91b6-b74d6c83cc03" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://tamservice.azurewebsites.net/TService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TService.disco" MetadataType="Disco" ID="bb6b217c-dfc2-4c91-acee-e577460863ac" SourceId="1" SourceUrl="http://tamservice.azurewebsites.net/TService.svc?disco" />
+    <MetadataFile FileName="TService.xsd" MetadataType="Schema" ID="75a00e72-d5e3-4774-9c24-553cef63d994" SourceId="1" SourceUrl="http://tamservice.azurewebsites.net/TService.svc?xsd=xsd2" />
+    <MetadataFile FileName="TService.wsdl" MetadataType="Wsdl" ID="0eaeffc7-f82c-447f-8603-81a0a5564976" SourceId="1" SourceUrl="http://tamservice.azurewebsites.net/TService.svc?wsdl" />
+    <MetadataFile FileName="TService1.xsd" MetadataType="Schema" ID="23305dc9-aa5f-4e63-a8d0-92a8b3a799ce" SourceId="1" SourceUrl="http://tamservice.azurewebsites.net/TService.svc?xsd=xsd1" />
+    <MetadataFile FileName="TService2.xsd" MetadataType="Schema" ID="222a26ff-e535-4ddf-b136-52809924379d" SourceId="1" SourceUrl="http://tamservice.azurewebsites.net/TService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

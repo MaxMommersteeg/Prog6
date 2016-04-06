@@ -1,0 +1,27 @@
+﻿@using Tamagotchi.Web.Models
+@model Home
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="container">
+    <div class="jumbotron">
+        <h1>Tamagotchi</h1>
+        <p class="lead">Inzage in uw tamagotchies en uitvoeren van acties.</p>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            @if (!String.IsNullOrEmpty((String)TempData["UserFeedback"])) {
+                <div class="alert alert-info alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    @TempData["UserFeedback"]
+                </div>
+            }
+        </div>
+    </div>
+    @Html.Partial("CreateTamagotchi", Model.NewTamagotchi)
+    @if(Model.ShowFoundTamagotchies) {
+        @Html.Partial("TamagotchiList")
+    }
+</div>

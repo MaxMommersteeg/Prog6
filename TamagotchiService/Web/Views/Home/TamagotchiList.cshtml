@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "TamagotchiList";
+}
+
+<script src="@Url.Content("~/Scripts/tamagotchi-data-retrieval.js")"></script>
+<script src="@Url.Content("~/Scripts/tamagotchi-action-handler.js")"></script>
+
+<hr/>
+
+<div class="col-md-12">
+    <div class="row">
+        <h3>Gevonden Tamagotchies voor @User.Identity.Name</h3>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <p class="pull-left help-block">Verversen doen wij vóór u.</p>
+        </div>
+        <div class="col-md-4">
+            <div style="height:38px;">
+                <p id="loadinggif" class="pull-right">
+                    Laden... <img id="loadinggif" src="~/Img/Loading.gif" />
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="table-responsive">
+            <table class="table table-striped table-condensed" id="tamagotchitable"></table>
+        </div>
+    </div>
+</div>
+
+
+
+
+
